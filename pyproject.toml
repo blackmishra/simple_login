@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "paste-bin"
+version = "0.1.0"
+description = "Basic app for clipboard management"
+authors = ["blackmishra <mishra.shashank9598@gmail.com>"]
+readme = "README.md"
+packages = [{include = "paste_bin"}]
+
+[tool.poetry.dependencies]
+python = "3.10.11"
+django = "^4.2.2"
+djangorestframework = "^3.14.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
