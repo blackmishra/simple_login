@@ -1,11 +1,13 @@
-from django.urls import path, include
-from rest_framework import routers
-from .views import PostViewSet
+from django.urls import path
 
+# from rest_framework import routers
+from posts.views import PostView
 
-router = routers.DefaultRouter()
-router.register(r'posts', PostViewSet)
+# app_name = "posts_app"
+# router = routers.DefaultRouter()
+# router.register(r'posts', PostViewSet, basename='api-post')
 
 urlpatterns = [
-    path('', include(router.urls)),
+    # path('view_all', include(router.urls)),
+    path("view_all", PostView.as_view(), name="view_all"),
 ]
